@@ -16,11 +16,13 @@ Automatically calculate:
 
 ## Project Structure
 
+```
 grade_generator/
 │
 ├── main.py                # Starts the program and displays results
 ├── assignment.py          # Defines how each assignment is stored and formatted
 └── grade_calculator.py    # Handles input, validation, calculations, and result logic
+```
 
 ## How to Run the Application
 
