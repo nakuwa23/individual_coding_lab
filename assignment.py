@@ -14,5 +14,4 @@ class Assignment:
         self.weighted_grade = (grade * weight) / 100
 
     def __str__(self):
-        """Return formatted string representation of the assignment."""
         return f"{self.name} | {self.category} | Weight: {self.weight}% | Grade: {self.grade}% | Weighted: {self.weighted_grade:.2f}"

@@ -12,23 +12,23 @@ class GradeCalculator:
         self.weighted_grades = {'Formative': 0, 'Summative': 0}
 
     def validate_category(self, category):
-        """Validate that the category is either Formative or Summative."""
+        """Check that the category is either Formative or Summative."""
         valid_categories = ['Formative', 'Summative']
         return category in valid_categories
 
     def validate_weight(self, category, weight):
-        """Validate weight is positive and doesn't exceed remaining category limit."""
+        """Check that the weight is positive and doesn't exceed the remaining category limit."""
         if weight <= 0 or weight > 100:
             return False
         # Check if adding this weight would exceed 100% for the category
         return self.total_weight[category] + weight <= 100
 
     def validate_grade(self, grade):
-        """Validate grade is within acceptable range (0-100)."""
+        """Check that the grade is within the acceptable range (0-100)."""
         return 0 <= grade <= 100
 
     def get_valid_input(self, prompt, validator, error_msg):
-        """Generic method to get valid input with error handling."""
+        """A method to get valid input with error handling."""
         while True:
             try:
                 user_input = input(prompt).strip()
@@ -40,7 +40,6 @@ class GradeCalculator:
                 print(f"Error: {error_msg}")
 
     def collect_input(self):
-        """Collect assignment details from user with comprehensive validation."""
         print("\nPlease enter your assignment info. You can key in multiple assignments.")
         print("Valid Categories: Formative or Summative \n")
         
@@ -111,7 +110,7 @@ class GradeCalculator:
             print(f"\nAssignment '{name}' added successfully!")
             print(f"Category: {category} | Weight: {weight}% | Grade: {grade}%")
 
-            # Ask for more assignments
+            # Prompt for more assignments
             while True:
                 more = input("\nWould you like to add another assignment? (y/n): ").strip().lower()
                 if more in ['y', 'yes', 'n', 'no']:
