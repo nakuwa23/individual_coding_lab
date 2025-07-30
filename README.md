@@ -54,7 +54,7 @@ You'll be guided through these steps:
 You can keep adding multiple assignments, and when you're done, you will be prompted if you want to add another assignment, kindly select "n" for "no".
 
 ## Interaction Example
-
+```
 WELCOME TO THE GRADE GENERATOR CALCULATOR
 
 Enter assignment name: Final Exam
@@ -73,6 +73,7 @@ Enter the grade obtained (0-100%): 70
 
 Would you like to add another assignment? (y/n): y
 ...
+```
 
 At the end, you'll get a detailed breakdown of your grades, category averages, and your GPA.
 
@@ -97,6 +98,7 @@ If either one is below 50%, the result is: **FAIL & REPEAT**
 
 ## Output Example
 
+```
 GRADE CALCULATION RESULTS
 
 ASSIGNMENT SUMMARY:
@@ -115,6 +117,7 @@ GPA: 2.55 / 5.00
 FINAL REPORT: PASS
 
 Bravo! You have successfully passed the course!
+```
 
 ## Files Explained
 
